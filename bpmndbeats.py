@@ -3,8 +3,9 @@ import sys
 from aubio import source, tempo
 from numpy import median, diff
 
-# def printing_stuff():
-#     return 
+def printing_stuff():
+    print "I am learning"
+    return
 
 def get_file_bpm(path, params=None):
     """ Calculate the beats per minute (bpm) of a given file.
