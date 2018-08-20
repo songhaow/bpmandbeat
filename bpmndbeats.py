@@ -30,7 +30,7 @@ def get_file_bpm(path, params=None):
         elif params.mode in ['default']:
             pass
         else:
-            print("unknown mode {:s}".format(params.mode))
+            print('unknown mode %s' % params.mode)
     # manual settings
     if 'samplerate' in params:
         samplerate = params.samplerate
@@ -85,8 +85,8 @@ if __name__ == '__main__':
     for f in args.sources:
         bpm = get_file_bpm(f, params = args)
         # print("{:6s} {:s}".format("{:2f}".format(bpm),f))
-        print(f"source file: {f}")
-        print("The bpm is: %7.3f.") %bpm
+        print("source file: %s" % f)
+        print('The bpm is: %s' % bpm)
 
 
 
@@ -104,7 +104,7 @@ filename = sys.argv[1]
 samplerate = 0
 if len( sys.argv ) > 2: samplerate = int(sys.argv[2])
 
-print(f"samplerate: {samplerate}")
+print("samplerate: %s" % samplerate)
 print("")
 
 s = source(filename, samplerate, hop_s)
